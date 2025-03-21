@@ -1,0 +1,67 @@
+*
+ {
+    box-sizing: border-box;
+ }
+ body {
+    margin: 0;
+ }
+ @font-face {
+    font-family: montserrat;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+ }
+ :root {
+    --fontFamilyNumber1: montserrat;
+ }
+header {
+    background-color: #8691A0;
+    height: 11vh;
+    display: flex;
+}
+ .logo {
+    width: 40px;
+    height: 40px;
+    margin: 12px 0 0 20px;
+ } 
+header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-top: 1.3rem;
+}
+header a {
+    padding: 1rem;
+    color: white;
+    font-family: var(--fontFamilyNumber1);
+    text-decoration: none;
+    font-size: medium;
+}
+
+main {
+    height: 83vh;
+    background-color: #FAF5F0;
+}
+main ul {
+    height: 450px;
+    margin: 0;
+}
+main article {
+    display: flex;
+    justify-content: space-between;
+    background-color: #D5D8DB;
+    width: 95%;
+    margin: 0 auto;
+}
+main article img {
+    width: 20px;
+    height: 20px
+}
+main article p {
+    margin: 0;
+
+}
+footer {
+    background-color: #8691A0;
+}
+footer p {
+    margin: 0;
+}
