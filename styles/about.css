@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Fonctions personnalisées */
+@font-face {
+  font-family: montserrat;
+  src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+:root {
+  --font-style-one: montserrat;
+  --color-1: #FAF5F0;
+  --color-2: #D5D8DB;
+  --color-3: #8691A0;
+  --color-article: black;
+}
+
+/* Partie Header */
+header {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 96px;
+}
+
+nav {
+  margin-left: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 32px;
+
+  a {
+    text-decoration: none;
+    font-family: var(--font-style-one);
+    color: var(--color-1);
+  }
+}
+
+/* Partie Main */
+main {
+  height: 100%;
+  color: var(--color-article);
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 colonnes égales */
+  gap: 16px 32px;
+  /* Espacement entre les articles */
+  padding: 16px 32px;
+  max-width: 1200px;
+  /* Ajuste la largeur max pour un bon rendu */
+  margin: 0 auto;
+  /* Centre la section */
+}
+
+article {
+  background-color: var(--color-1);
+  padding: 16px;
+  font-weight: 500;
+
+  .carte {
+    background-color: var(--color-2);
+  }
+}
+
+
+/* Partie Footer */
+footer {
+  background-color: var(--color-3);
+}
+
+h2 {
+  font-family: var(--font-style-one);
+  font-size: 16px;
+}
+
+p {
+  margin: 0;
+  padding: 16px;
+  color: var(--font-style-one);
+  font-family: var(--font-style-one);
+  font-weight: 500;
+  font-size: 12px;
+}
+
+/* media Query pour la version portable */
+@media screen and (max-width: 768px) {
+  section {
+    grid-template-columns: 1fr;
+    /* Une seule colonne */
+    width: 90%;
+    justify-content: center;
+  }
+}
