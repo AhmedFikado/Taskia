@@ -83,6 +83,7 @@ article {
   padding: 16px;
   font-weight: 500;
   display: flex;
+  border: 1px solid black;
 
   img {
     height: 200px;
@@ -98,6 +99,7 @@ article {
 /* Partie Footer */
 footer {
   background-color: var(--color-3);
+  color: var(--color-1);
 }
 
 h2 {
