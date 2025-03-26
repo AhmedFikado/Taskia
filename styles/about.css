@@ -117,7 +117,7 @@ p {
 }
 
 /* media Query pour la version portable */
-@media screen and (max-width: 600px) {
+@media (min-width: 280px) and (max-width: 768px) {
   section {
     display: flex;
     flex-direction: column;
@@ -135,16 +135,16 @@ p {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   section {
-    display: flex;
+    display: grid;
     flex-direction: column;
-    max-width: 600px;
   }
 
   article {
     display: flex;
     flex-direction: column;
+    max-width: auto;
   }
 
   article img {
