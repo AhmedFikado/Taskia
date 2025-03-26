@@ -1,8 +1,6 @@
 * {
     box-sizing: border-box;
   }
-
-
   @font-face {
     font-family: montserrat;
     src: url(../fonts/Montserrat-VariableFont_wght.ttf);
@@ -17,29 +15,16 @@ body {
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    top: 54px;
     width: 90%;
-    margin: 4rem auto;
+    margin: 0 auto;
     background-color: #D9D9D9;
-    display: grid;
     border: solid black;
-    border-radius: 70px;
-    border-width: 4px;
+    border-radius: 30px;
+    border-width: 2px;
+    text-align: center;
     
-}
-
-section {
-    display: flex;
-    justify-content: center;
-    padding: 0 0 24px 0;
-}
-
-.title {
-    display: flex;
-    justify-content: center;
-
 }
 
 h1 {
@@ -50,42 +35,72 @@ h1 {
     
 }
 
-.logo {
-    display: flex;
-    justify-content: center;
-    padding: 0 0 48px 0;
-}
 
 .logo img {
-    width: 80%
+    max-width: 80%;
+    margin-bottom: 4rem;
+}
+@media screen and (min-width: 992px) {
+    main { 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        
+        .logo {
+            margin-top: 40px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+        .title {
+
+            position: relative;
+            right: 150px;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            
+            h1 {
+                font-size: 2.1rem;
+            }
+        }
+        .button {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            position: relative;
+            left: 120px;
+        }
+
+    
+    }    
+
 }
 
 .write {
     display: flex;          
     flex-direction: column; 
-    justify-content: center; 
+    gap: 20px;
     align-items: center;
-    padding: 0 0 2rem 0;
+    padding: 0 0 1rem 0;
 }
 
-.write p {
-    display: inline-block;
+.write article {
     border-radius: 12px;       
-    padding: 10px 15px;        
-    background-color: #8691A0; 
-}
+    padding: 10px 15px;  
+    background-color: #8691A0;
+} 
 
 .write label {
     background-color: #8691A0;
 }
 
-.write p label {
+.write article label {
     display: flex;
     align-items: center;
     gap: 1rem;
-}
+} 
 
-.write p label img {
+.write img{
     width: 24px;
 }
 
@@ -94,22 +109,16 @@ input[type="text"] {
     font-weight: bold;
     border: none;
     outline: none;
-    background-color: transparent; /* Pour enlever le petit blanc */
+    /* Pour enlever le petit cadre blanc */
+    background-color: transparent; 
     padding: 5px 0;
     width: 100%;
 }
 
 input[type="text"]::placeholder {
-    color: black;
+    color: white;
 }
 
-.button {
-    
-    display: flex;          
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-}
 
 button {
     width: 200px;
@@ -121,3 +130,4 @@ button {
     border: none;
 }
 
+   
