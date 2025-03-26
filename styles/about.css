@@ -47,6 +47,10 @@ ul {
   justify-content: flex-end;
   gap: 32px;
 
+  a:hover {
+    color: var(--color-2);
+  }
+
   a {
     text-decoration: none;
     font-family: var(--font-style-one);
@@ -73,20 +77,33 @@ section {
   /* Centre la section */
 }
 
+.carte {
+  display: block;
+  justify-content: center;
+}
+
 article {
   background-color: var(--color-1);
   padding: 16px;
   font-weight: 500;
+  display: flex;
+  border: 1px solid black;
+
+  img {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+  }
 
   .carte {
     background-color: var(--color-2);
   }
 }
 
-
 /* Partie Footer */
 footer {
   background-color: var(--color-3);
+  color: var(--color-1);
 }
 
 h2 {
@@ -104,11 +121,39 @@ p {
 }
 
 /* media Query pour la version portable */
-@media screen and (max-width: 768px) {
+@media (min-width: 280px) and (max-width: 768px) {
   section {
-    grid-template-columns: 1fr;
-    /* Une seule colonne */
-    width: 90%;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  article img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  section {
+    display: grid;
+    flex-direction: column;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    max-width: auto;
+  }
+
+  article img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 10px;
   }
 }
