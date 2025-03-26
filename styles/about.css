@@ -73,16 +73,27 @@ section {
   /* Centre la section */
 }
 
+.carte {
+  display: block;
+  justify-content: center;
+}
+
 article {
   background-color: var(--color-1);
   padding: 16px;
   font-weight: 500;
+  display: flex;
+
+  img {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+  }
 
   .carte {
     background-color: var(--color-2);
   }
 }
-
 
 /* Partie Footer */
 footer {
@@ -104,11 +115,20 @@ p {
 }
 
 /* media Query pour la version portable */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   section {
-    grid-template-columns: 1fr;
-    /* Une seule colonne */
-    width: 90%;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  article img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 10px;
   }
 }
