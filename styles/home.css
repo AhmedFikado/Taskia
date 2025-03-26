@@ -12,6 +12,7 @@
  :root {
     --fontFamilyNumber1: montserrat;
  }
+ /* Header  */
 header {
     background-color: #8691A0;
     height: 70px;
@@ -50,16 +51,21 @@ header a {
     text-decoration: none;
     font-size: medium;
 }
-
+/* Main page */
 main {
      min-height: calc(100vh - 70px - 50px);
      background-color: #FAF5F0;
+     display: flex;
+     flex-direction: column;
+    justify-content: space-between;
 }
+/* List/début main */
 main ul {
     height: auto;
     margin: 0;
     display: grid;
-    gap: 90px;
+    /* justify-content: center; */
+    gap: 1rem;
     width: 100%;
     max-width: 100%;
     padding: 4rem 1rem;
@@ -72,7 +78,8 @@ main ul li {
 main ul li p {
     max-width: 100%;
 }
-main article {
+/* Second part of the main/To put the text and select the options*/
+main .article-input-zone {
     display: flex;
     justify-content: space-between;
     background-color: #D5D8DB;
@@ -84,10 +91,8 @@ main article img {
     width: 20px;
     height: 20px
 }
-main article p {
-    margin: 0;
 
-}
+/* Footer */
 footer {
     background-color: #8691A0;
     display: flex;
@@ -100,4 +105,75 @@ footer p {
     font-family: var(--fontFamilyNumber1);
     font-weight: bold;
     padding: 1rem;
+}
+
+
+/* JavaScript */
+
+.task-li {
+    background-color: rgb(153, 212, 153);
+    padding: 1rem;
+    min-height: 260px;
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.task-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem;
+}
+
+.task-p {
+    overflow-wrap: break-word;
+    max-width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    max-height: 160px;
+    overflow-y: auto;
+    font-size: 1rem;
+}
+
+.done-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in;
+}
+
+.done-button:hover {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.validated {
+    background-color: #a0dca0 !important;
+    transform: scale(0.90);
+    opacity: 0.6;
+    text-decoration:line-through;
+}
+
+.delete-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in;
+}
+
+.delete-button:hover {
+    background-color: #e74c3c;
+    color: white;
 }
