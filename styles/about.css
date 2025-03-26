@@ -47,6 +47,10 @@ ul {
   justify-content: flex-end;
   gap: 32px;
 
+  a:hover {
+    color: var(--color-2);
+  }
+
   a {
     text-decoration: none;
     font-family: var(--font-style-one);
