@@ -1,5 +1,5 @@
 // Variable ul/button/form/input
-const list = document.querySelector('.list'); 
+const list = document.querySelector('.list');
 const button = document.querySelector('.bouton-add');
 const formTask = document.querySelector('.add-task');
 const input = document.querySelector('.zone-text');
@@ -30,15 +30,15 @@ function createTaskElement(text) {
     pInsideLi.innerText = text;
 
     // Boutons
-    const doneButton = createButton("✔", "done-button", function() {
+    const doneButton = createButton("✔", "done-button", function () {
         newLi.classList.toggle("validated"); // Marquer comme validé
     });
 
     /* Variable qui permet d'utiliser la fonction createButton
      avec les paramètres voulu et permet de supprimer newTask
     */
-    const deleteButton = createButton("🗑", "delete-button", function() {
-        newLi.remove(); 
+    const deleteButton = createButton("🗑", "delete-button", function () {
+        newLi.remove();
     });
 
     articleContainer.appendChild(doneButton);
@@ -64,13 +64,13 @@ function addTask() {
 
     const newTask = createTaskElement(taskText);
     list.appendChild(newTask);
-    input.value = ""; 
+    input.value = "";
 }
 
 // Action sur le bouton. Dès le click fait, ça prend la function addTask en paramètre.
 button.addEventListener('click', addTask);
 // Empêche le form via l'input de recharger la page et appel la function addTask.
-formTask.addEventListener('submit', function(event) {
+formTask.addEventListener('submit', function (event) {
     event.preventDefault();
     addTask();
 });
