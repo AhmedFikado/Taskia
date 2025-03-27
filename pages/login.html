@@ -8,33 +8,35 @@
 </head>
 <body> 
     <main>
-        <article class = "title">
-            <h1>Welcome !</h1>
-        </article>
-            
-
-        <span class = "logo">
-            <img src="../img/TAS.png" alt="Logo du projet avec une ampoule">
-        </span>
-
-        <section class = "write">
-            <article>
-                <label>
-                    <img src="../img/user.png" alt="une personne">
-                    <input type="text" placeholder="Enter your name">
-                </label>
+        <section class="page">
+            <article class = "title">
+                <h1>Welcome !</h1>
             </article>
-            <article>
-                <label>
-                    <img src="../img/cadena.png" alt="cadena">
-                    <input type="text" placeholder="Enter your Password">
-                </label>
-            </article>
-        </section>
-        <section class ="button">
-            <p id="login"><button>Log-In</button></p>
-            <p id="changecolor"><Button>Change color</Button></p>
-        </section>
+            <span class = "logo">
+                <img src="../img/TAS.png" alt="Logo du projet avec une ampoule">
+            </span>
+    
+            <section class = "write">
+                <article>
+                    <label>
+                        <img src="../img/user.png" alt="une personne">
+                        <input type="text" id="userName" placeholder="Enter your name" onfocus="this.placeholder=''" onblur="this.placeholder='Username'">
+                    </label>
+                </article>
+                <article>
+                    <label>
+                        <img src="../img/cadena.png" alt="cadena">
+                        <input type="password" id="passwordInput" placeholder="Password">
+                    </label>
+                </article>
+            </section>
+            <section class ="button">
+                <p id="login">
+                    <a href="../pages/home.html"><button name="login">Log-In</button></a></p>
+                <p id="changecolor">
+                    <Button name="change color">Change color</Button></p>
+            </section>
+        </section>  
     </main>
 </body>
 </html>
