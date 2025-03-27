@@ -43,9 +43,10 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	padding-bottom: 2rem;
 }
 /* List/début main */
-main ul {
+.list {
 	height: auto;
 	margin: 0;
 	display: grid;
@@ -55,7 +56,7 @@ main ul {
 	padding: 4rem 1rem;
 	list-style: none;
 }
-/* Second part of the main/To put the text and select the options*/
+/* Second part main/Pour le texte dans le input/select/option */
 main .article-input-zone {
 	display: flex;
 	justify-content: space-between;
@@ -72,10 +73,11 @@ main article img {
 	background-color: transparent;
 	border: none;
 	outline: none;
-	font-weight: 900;
+	font-weight: bold;
 }
 main select {
 	display: none;
+	width: 100%;
 }
 div {
 	display: flex;
@@ -117,11 +119,10 @@ footer p {
 .task-p {
 	overflow-wrap: break-word;
 	max-width: 100%;
-	text-align: center;
 	padding: 0.5rem;
 	max-height: 160px;
 	overflow-y: auto;
-	font-size: 1rem;
+	font-weight: bold;
 }
 
 .done-button {
@@ -175,11 +176,17 @@ footer p {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 	}
+	footer {
+		justify-content: flex-start;
+	}
 }
 /* Version tablette */
 @media screen and (min-width: 768px) and (max-width: 992px) {
 	main ul {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+	}
+	footer {
+		justify-content: flex-start;
 	}
 }

@@ -6,7 +6,8 @@ const formTask = document.querySelector(".add-task");
 const input = document.querySelector(".zone-text");
 const imgSelect = document.querySelector(".img-select-list");
 const select = document.querySelector("select");
-
+// Variable qui va nous permettre de compter le nombre de post-it
+let taskCount = 0;
 
 // Permet à l'utilisateur de pouvoir intéragir avec le select
 imgSelect.addEventListener("click", () => {
@@ -52,12 +53,10 @@ function createTaskElement(text) {
 	pInsideLi.classList.add("task-p");
 	pInsideLi.innerText = text;
 
-
 	// Boutons
 	const doneButton = createButton("✔", "done-button", function () {
 		newLi.classList.toggle("validated"); // Marquer comme validé
 	});
-
 
 	/* Variable qui permet d'utiliser la fonction createButton
      avec les paramètres voulu et permet de supprimer newTask
@@ -65,8 +64,9 @@ function createTaskElement(text) {
 
 	const deleteButton = createButton("🗑", "delete-button", function () {
 		newLi.remove();
+		// Suppression d'un li donc on retire 1 à la variable qui compte les li.
+		taskCount--;
 	});
-
 
 	articleContainer.appendChild(doneButton);
 	articleContainer.appendChild(pInsideLi);
@@ -83,6 +83,12 @@ function createTaskElement(text) {
 */
 function addTask() {
 	const taskText = input.value.trim();
+	/* Ce if permet de vérifier que les li ne dépassent pas 3 post-it. 
+	   Sans le return, l'action pourrait être faite. */
+	if (taskCount >= 3) {
+		alert("Veuillez vous connecter pour avoir plus de post-it !");
+		return;
+	}
 
 	if (taskText === "") {
 		alert("Vous devez écrire quelque chose !");
@@ -93,11 +99,10 @@ function addTask() {
 		return;
 	}
 
-
 	const newTask = createTaskElement(taskText);
 	list.appendChild(newTask);
 	input.value = "";
-
+	taskCount++;
 }
 
 // Action sur le bouton. Dès le click fait, ça prend la function addTask en paramètre.
@@ -107,5 +112,4 @@ button.addEventListener("click", addTask);
 formTask.addEventListener("submit", function (event) {
 	event.preventDefault();
 	addTask();
-
 });
