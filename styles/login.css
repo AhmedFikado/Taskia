@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    /* background-color: rgb(14, 241, 241); */
 }
 
 main {
@@ -53,22 +53,25 @@ h1 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
+        border-radius: 0px;
         
         
         .title { 
 
-            /* position: relative; */
             right: 150px;
             grid-column-start: 2;
             grid-column-end: 3; 
             
             h1 {
-                font-size: 2.1rem;
+                font-size: 3rem;
             }
         }
 
         .logo {
             margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             grid-column-start: 1;
             grid-column-end: 2;
             grid-row-start: 1;
@@ -119,6 +122,7 @@ h1 {
 
 input[type="text"] {
     font-family: var(--fontFamilyNumber1);
+    color: white;
     font-weight: bold;
     border: none;
     outline: none;
@@ -130,6 +134,7 @@ input[type="text"] {
 
 input[type="password"] {
     font-family: var(--fontFamilyNumber1);
+    color: white;
     font-weight: bold;
     border: none;
     outline: none;
@@ -161,6 +166,8 @@ p :hover {
     background-color: rgb(229, 229, 239);
 }
 
-
+article :hover {
+    background-color: rgb(173, 173, 180);
+}
 
    
