@@ -1,33 +1,34 @@
+const page = document.querySelector(".page"); 
+// const color = document.getElementById("buttonColor");
+const color = document.querySelector("#buttonColor");
+
+
+
+color.addEventListener("click", () => {
+    const originalColor = "#D9D9D9"; // Couleur d'origine si elle bien définie dans le CSS
+    if (page.style.backgroundColor === "lightblue") {
+        page.style.backgroundColor = originalColor; // Permet de revenir à la couleur d'origine
+    } else {
+        page.style.backgroundColor = "lightblue"; 
+    }
+});
+
+
+
+
+
+
 // const userName = document.querySelector("#Username")
 // const passWord = document.querySelector("#passwordInput")
-// const logIn = document.querySelector("#login")
+// const logIn = document.querySelector("#buttonLogin")
 
 // logIn.addEventListener("click", () => {
-//     if (userName === "" && passWord === "") {
-//         alert("Please enter your Username and your Password");
-//         return;
-//     } else if (userName === "" || passWord === "") {
-//         alert(You )
+//     if (userName === "" || passWord === "") {
+//         alert("Please fill empty box");
+//     { else {
+
 //     }
-// })
 
-// const backPage =document.querySelector(".page")
-// const color = document.querySelector("#changecolor")
-
-// color.addEventListener("click", () => {
-//     if (backPage.style.backgroundcolor === "red") 
-//         return
-//         backPage.style.backgroundcolor = "#D9D9D9"
-//     } else {
-//         backPage.style.backgroundcolor ="red"
-    
-
+//     }}
 // });
-
-const backPage = document.querySelector(".page")
-const color = document.querySelector("#buttonColor")
-
-document.getElementById("buttonColor").addEventListener("click", function() {
-    document.backPage.style.backgroundColor = "lightblue"; // Remplace "lightblue" par la couleur que tu veux
-});
 
