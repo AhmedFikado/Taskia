@@ -1,7 +1,6 @@
 # 🌟 Taskia 🌟
 
-Premier projet réalisé de type "To-Do List" à partir de la troisième semaine de fomation.
-
+✅ Premier projet réalisé de type "To-Do List" à partir de la troisième semaine de formation.
 
 
 La maquette ci-dessous :
@@ -29,4 +28,4 @@ La maquette ci-dessous :
 ⚡ **Langages :** HTML/CSS, JavaScript.
 
 
-© Copyright WestDevs - TASKIA
+**© Copyright WestDevs - TASKIA**
