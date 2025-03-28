@@ -54,7 +54,7 @@ function createTaskElement(text) {
 	pInsideLi.innerText = text;
 
 	// Boutons
-	const doneButton = createButton("✔", "done-button", function () {
+	const doneButton = createButton("✔", "done-button", () => {
 		newLi.classList.toggle("validated"); // Marquer comme validé
 	});
 
@@ -62,7 +62,7 @@ function createTaskElement(text) {
      avec les paramètres voulu et permet de supprimer newTask
     */
 
-	const deleteButton = createButton("🗑", "delete-button", function () {
+	const deleteButton = createButton("🗑", "delete-button", () => {
 		newLi.remove();
 		// Suppression d'un li donc on retire 1 à la variable qui compte les li.
 		taskCount--;
@@ -94,7 +94,7 @@ function addTask() {
 		alert("Vous devez écrire quelque chose !");
 		return;
 	}
-	if (selectOption == "") {
+	if (selectOption === "") {
 		alert("Vous devez choisir une option dans le menu !");
 		return;
 	}
@@ -109,7 +109,7 @@ function addTask() {
 button.addEventListener("click", addTask);
 // Empêche le form via l'input de recharger la page et appel la function addTask.
 
-formTask.addEventListener("submit", function (event) {
+formTask.addEventListener("submit", (event) => {
 	event.preventDefault();
 	addTask();
 });
