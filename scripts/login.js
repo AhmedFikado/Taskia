@@ -15,20 +15,15 @@ color.addEventListener("click", () => {
 
 
 
+const userName = document.querySelector("#userName");
+const passWord = document.querySelector("#passwordInput");
+const logIn = document.querySelector("#buttonLogin");
 
-
-
-// const userName = document.querySelector("#Username")
-// const passWord = document.querySelector("#passwordInput")
-// const logIn = document.querySelector("#buttonLogin")
-
-// logIn.addEventListener("click", () => {
-//     if (userName === "" || passWord === "") {
-//         alert("Please fill empty box");
-//     { else {
-
-//     }
-
-//     }}
-// });
-
+logIn.addEventListener("click", (e) => {
+    
+    if (userName.value === "" || passWord.value === "") {
+        alert("Please fill empty box");
+        e.preventDefault();
+        logIn.disabled = true;
+    }
+});
