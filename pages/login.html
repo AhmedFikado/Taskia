@@ -26,7 +26,7 @@
                 <article>
                     <label>
                         <img src="../img/cadena.png" alt="cadena">
-                        <input type="password" id="passwordInput" placeholder="Password">
+                        <input type="password" id="passwordInput" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'">
                     </label>
                 </article>
             </section>
@@ -34,9 +34,10 @@
                 <p id="login">
                     <a href="../pages/home.html"><button name="login">Log-In</button></a></p>
                 <p id="changecolor">
-                    <Button name="change color">Change color</Button></p>
+                    <Button id ="buttonColor">Change color</Button></p>
             </section>
         </section>  
     </main>
+    <script src="../scripts/login.js"></script>
 </body>
 </html>
