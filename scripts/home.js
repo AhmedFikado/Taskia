@@ -6,6 +6,7 @@ const formTask = document.querySelector(".add-task");
 const input = document.querySelector(".zone-text");
 const imgSelect = document.querySelector(".img-select-list");
 const select = document.querySelector("select");
+const errorMsg = document.querySelector(".error-message");
 // Variable qui va nous permettre de compter le nombre de post-it
 let taskCount = 0;
 
@@ -86,7 +87,15 @@ function addTask() {
 	/* Ce if permet de vérifier que les li ne dépassent pas 3 post-it. 
 	   Sans le return, l'action pourrait être faite. */
 	if (taskCount >= 3) {
-		alert("Veuillez vous connecter pour avoir plus de post-it !");
+		const textStop = document.createElement("a");
+		textStop.classList.add("textStop");
+		errorMsg.appendChild(textStop);
+		textStop.textContent =
+			"Veuillez vous connecter afin d'utiliser davantage de post-it.";
+		textStop.href = "../pages/login.html";
+		input.disabled = true;
+
+		// alert("Veuillez vous connecter pour avoir plus de post-it !");
 		return;
 	}
 

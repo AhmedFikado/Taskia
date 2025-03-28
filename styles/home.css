@@ -164,6 +164,34 @@ footer p {
 	background-color: #e74c3c;
 	color: white;
 }
+.textStop {
+	width: 80%;
+	background-color: #d5d8db;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.error-message {
+	max-width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		color: black;
+		cursor: pointer;
+
+		&:hover {
+			color: white;
+			transform: scale(0.8);
+			transition: 0.5s ease-in-out;
+		}
+	}
+}
 
 /* Media queries  */
 
